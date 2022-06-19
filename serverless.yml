@@ -1,0 +1,11 @@
+service: aws-serverless-api-node
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  - ${file(./api/clients/functions.yml):functions}
+  - ${file(./api/products/functions.yml):functions}
+  - ${file(./functions/functions.yml):functions}

@@ -1,0 +1,5 @@
+functions:
+  example_schedule:
+    handler: ./functions/controllers.example_schedule
+#     events:
+#       - schedule: cron(0/2 * ? * MON-FRI *)

@@ -1,0 +1,31 @@
+functions:
+  createProduct:
+    handler: ./api/products/controllers.create
+    events:
+      - httpApi:
+          path: /products
+          method: post
+  findProduct:
+    handler: ./api/products/controllers.findOne
+    events:
+      - httpApi:
+          path: /products
+          method: get
+  findProducts:
+    handler: ./api/products/controllers.find
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: get
+  updateProduct:
+    handler: ./api/products/controllers.update
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: put
+  deleteProduct:
+    handler: ./api/products/controllers.delete
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: delete

@@ -1,0 +1,31 @@
+functions:
+  createClient:
+    handler: ./api/clients/controllers.create
+    events:
+      - httpApi:
+          path: /clients
+          method: post
+  findClient:
+    handler: ./api/clients/controllers.findOne
+    events:
+      - httpApi:
+          path: /clients
+          method: get
+  findClients:
+    handler: ./api/clients/controllers.find
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: get
+  updateClient:
+    handler: ./api/clients/controllers.update
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: put
+  deleteClient:
+    handler: ./api/clients/controllers.delete
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: delete
